@@ -1,0 +1,23 @@
+Unit Test Specifications
+
+Multiplication Function
+
+Expect multiplication(2, 3) to be a number
+Expect multiplication(2, 3) to be equal to 6
+Expect multiplication(-2, 3) to be equal to -6
+
+concatOdds Function
+
+Expect concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1]) to return [-1, 1, 3, 9, 15]
+Expect concatOdds([1, 1, 1], [3, 3, 3]) to return [1, 3]
+Expect concatOdds("string", [1, 3]) to be an error
+
+Functional Test Specifications
+
+Shopping Cart Checkout Feature
+
+When a user goes to check out with an empty cart, they should be shown an error message preventing them from continuing
+When a user adds items to the cart and goes to checkout, they should be shown a summary of their order
+When a user successfully enters valid payment, they should see an order confirmation page
+When a user completes a purchase, they should receive an email confirmation
+
