@@ -1,23 +1,50 @@
-Unit Test Specifications
+**Unit Test Specifications**
 
-Multiplication Function
+# Multiplication Function
+Input: multiplication(2, 3) --- Output: a number
+Input: multiplication(2, 3) --- Output: equal to 6
+Input: multiplication(-2, 3) --- Output: equal to -6
 
-Expect multiplication(2, 3) to be a number
-Expect multiplication(2, 3) to be equal to 6
-Expect multiplication(-2, 3) to be equal to -6
+*Edge Cases Multiplication Function*
+Input: multiplication("a", 3) --- Output: an error
+Input: multiplication(null, 3) --- Output: an error
 
-concatOdds Function
+# concatOdds Function 
+Input: concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1]) --- Output: [-1, 1, 3, 9, 15]
+Input: concatOdds([1, 1, 1], [3, 3, 3]) --- Output: [1, 3]
 
-Expect concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1]) to return [-1, 1, 3, 9, 15]
-Expect concatOdds([1, 1, 1], [3, 3, 3]) to return [1, 3]
-Expect concatOdds("string", [1, 3]) to be an error
+*Edge Cases concatOdds Function*
+Input: concatOdds("string", [1, 3]) --- Output: an error
+Input: concatOdds(undefined, [1, 3, 5]) --- Output: an error
 
-Functional Test Specifications
+**Functional Test Specifications**
 
-Shopping Cart Checkout Feature
+# Shopping Cart Checkout Feature 
 
-When a user goes to check out with an empty cart, they should be shown an error message preventing them from continuing
-When a user adds items to the cart and goes to checkout, they should be shown a summary of their order
-When a user successfully enters valid payment, they should see an order confirmation page
-When a user completes a purchase, they should receive an email confirmation
+Check out with an empty cart -> show an error message preventing them from proceeding
 
+Adds items to the cart and proceeds to checkout -> show an order summary
+
+Guest user attempts to check out -> give an option to log in or continue as a guest
+
+Guest user completes checkout -> prompted to create an account after the purchase
+
+Logged-in user checks out -> saved shipping and payment details should be auto-filled
+
+Select a shipping method -> the total price should update 
+
+Enter a discount code -> the total price should update 
+
+Invalid payment information -> show an error message
+
+Valid payment details -> show an order confirmation page
+
+Complete a purchase -> receive an email confirmation
+
+Exit the checkout process -> cart items should remain saved for later
+
+Adjust quantity of an item from the cart during checkout -> the total price should adjust 
+
+Remove an item from the cart during checkout -> the total price should adjust 
+
+Refresh the page during checkout -> progress should be saved
